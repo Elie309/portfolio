@@ -1,21 +1,8 @@
-import Navigation from './components/Navigation';
-import Introduction from './components/Introduction';
-import Projects from './components/Projects';
-import AboutMe from './components/AboutMe';
-import ContactMe from './components/ContactMe';
-
 function App() {
   return (
-    <>
-      <header>
-        <h1>My Portfolio</h1>
-        <Navigation />
-      </header>
-      <Introduction />
-      <AboutMe />
-      <Projects />
-      <ContactMe />
-    </>
+    <div className="flex justify-center items-center h-screen bg-outer-space animate-gradient">
+      <h1 className="text-white font-bold text-3xl animate-bounce">Coming Soon</h1>
+    </div>
   )
 }
 
