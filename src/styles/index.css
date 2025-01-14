@@ -26,9 +26,7 @@ light: #ECF0F1
   nav ul li a {
     @apply text-white hover:text-accent;
   }
-  a:hober{
-    
-  }
+
 
   section {
     @apply p-8;
