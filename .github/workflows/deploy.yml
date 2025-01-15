@@ -16,7 +16,7 @@ jobs:
         - name: connect and pull
           run: ssh "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit"
         - name: install dependencies
-          run: npm install
+          run: cd ${{ secrets.WORK_DIR }} && npm install
         - name: build
           run: npm run build
         - name: cleanup
