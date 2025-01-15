@@ -19,7 +19,17 @@ jobs:
               cd ${{ secrets.WORK_DIR }}
               git checkout ${{ secrets.MAIN_BRANCH }}
               git pull
+            EOF
+        - name: npm install on server
+          run: |
+            ssh "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" << 'EOF'
+              cd ${{ secrets.WORK_DIR }}
               npm install
+            EOF
+        - name: npm run build on server
+          run: |
+            ssh "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" << 'EOF'
+              cd ${{ secrets.WORK_DIR }}
               npm run build
             EOF
         - name: cleanup
