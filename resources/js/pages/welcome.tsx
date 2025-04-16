@@ -3,7 +3,6 @@ import { type SharedData } from '@/types';
 import PortfolioLayout from '@/layouts/PortfolioLayout';
 import Hero from '@/components/portfolio/Hero';
 import About from '@/components/portfolio/About';
-import Skills from '@/components/portfolio/Skills';
 import Projects from '@/components/portfolio/Projects';
 import Contact from '@/components/portfolio/Contact';
 
@@ -12,49 +11,13 @@ export default function Welcome() {
 
   // Portfolio data
   const personalInfo = {
-    name: 'Your Name',
+    name: 'Elie Saade',
     title: 'Full Stack Developer',
     description: 'I design and develop beautiful, functional websites and applications that deliver exceptional user experiences.',
     aboutContent: 'I am a passionate full stack developer with expertise in Laravel, React, and Tailwind CSS. With a strong foundation in both frontend and backend technologies, I create scalable, responsive, and user-friendly web applications.',
     email: 'your.email@example.com',
     phone: '+1 234 567 8900',
   };
-
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      skills: [
-        { name: 'React', level: 90 },
-        { name: 'Tailwind CSS', level: 95 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'Next.js', level: 80 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'HTML/CSS', level: 95 },
-      ],
-    },
-    {
-      title: 'Backend',
-      skills: [
-        { name: 'Laravel', level: 90 },
-        { name: 'PHP', level: 85 },
-        { name: 'Node.js', level: 80 },
-        { name: 'Express.js', level: 75 },
-        { name: 'MySQL', level: 85 },
-        { name: 'PostgreSQL', level: 80 },
-      ],
-    },
-    {
-      title: 'Tools & Others',
-      skills: [
-        { name: 'Git', level: 90 },
-        { name: 'Docker', level: 75 },
-        { name: 'CI/CD', level: 70 },
-        { name: 'AWS', level: 65 },
-        { name: 'Jest', level: 80 },
-        { name: 'Figma', level: 70 },
-      ],
-    },
-  ];
 
   const projects = [
     {
@@ -151,7 +114,6 @@ export default function Welcome() {
       
       <About content={personalInfo.aboutContent} />
       
-      <Skills categories={skillCategories} />
       
       <Projects projects={projects} />
       
