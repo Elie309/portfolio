@@ -116,17 +116,7 @@ export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
                   }
                 </span>
               </Link>
-              <Link 
-                href="#skills" 
-                className={`text-gray-600 dark:text-gray-300 transition-all duration-300 ${activeSection === 'skills' ? 'text-indigo-600 dark:text-indigo-400 font-medium' : 'hover:text-gray-900 dark:hover:text-white'}`}
-              >
-                <span className="relative">
-                  Skills
-                  {activeSection === 'skills' && 
-                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-indigo-600 dark:bg-indigo-400 transform transition-transform origin-left"></span>
-                  }
-                </span>
-              </Link>
+             
               <Link 
                 href="#projects" 
                 className={`text-gray-600 dark:text-gray-300 transition-all duration-300 ${activeSection === 'projects' ? 'text-indigo-600 dark:text-indigo-400 font-medium' : 'hover:text-gray-900 dark:hover:text-white'}`}
